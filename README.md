@@ -1,5 +1,7 @@
 # Python
-python学习资料,与大家共同进步学习python
+欢迎来到信平的小屋，这里是python学习资料,希望与大家共同进步。
+博主联系方式：
+Email: xpws2006@163.com
 
 
 ## 新增图书
