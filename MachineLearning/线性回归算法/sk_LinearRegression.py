@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-最小二乘法线性回归函数
+线性回归
 
 """
 from __future__ import print_function
