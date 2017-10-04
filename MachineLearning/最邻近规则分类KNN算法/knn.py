@@ -22,3 +22,7 @@ knn.fit(X_train, y_train)
 print(knn.predict(X_test))
 print(y_test)
 
+# 一般使用测试集打分
+print( knn.score( X_test, y_test ))
+
+
