@@ -13,3 +13,6 @@ print(  clf.support_vectors_)
 print( clf.support_ )
 # get number of support vectors for each class
 print( clf.n_support_)
+
+print( clf.predict( [[2,0]] )  )
+
