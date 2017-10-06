@@ -1,5 +1,5 @@
 import numpy as np
-import pylab as pl
+import matplotlib.pyplot as pl
 from sklearn import svm
 
 # we create 40 separable points
