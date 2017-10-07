@@ -14,10 +14,6 @@ for row in reader:
 
 print(headers)
 
-
-
-
-
 featureList = []
 labelList = []
 
@@ -55,6 +51,8 @@ print("clf: " + str(clf))
 with open("allElectronicInformationGainOri.dot", 'w') as f:
     f = tree.export_graphviz(clf, feature_names=vec.get_feature_names(), out_file=f)
 
+#3 dot -Tpdf allElectronicInformationGainOri.dot -o tree.pdf
+
 # oneRowX = dummyX[0, :]
 # print("oneRowX: " + str(oneRowX))
 #
@@ -63,7 +61,7 @@ with open("allElectronicInformationGainOri.dot", 'w') as f:
 # newRowX[2] = 0
 # print("newRowX: " + str(newRowX))
 #
-# predictedY = clf.predict(newRowX)
+# predictedY = clf.predict([newRowX])
 # print("predictedY: " + str(predictedY))
 
 
