@@ -34,11 +34,10 @@ ax.spines['right'].set_color('none')
 ax.spines['top'].set_color('none')
 ax.xaxis.set_ticks_position('bottom')
 ax.yaxis.set_ticks_position('left')
-# y轴设置坐标原点为1
-ax.spines['bottom'].set_position(('data',1))
+# y轴设置坐标原点为-1
+ax.spines['bottom'].set_position(('data',-1))
 # x轴设置坐标原点为0
 ax.spines['left'].set_position(('data',0 ))
-
 
 plt.show()
 
