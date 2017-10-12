@@ -13,7 +13,6 @@ def get_data(file_name):
 
     return X_parameter,Y_parameter
 
-
 def linear_model_main(X_parameters, Y_parameters, predict_value):
     # Create linear regression object
     regr = linear_model.LinearRegression()
@@ -31,8 +30,10 @@ def show_linear_line(X_parameters,Y_parameters):
     regr.fit(X_parameters, Y_parameters)
     plt.scatter(X_parameters,Y_parameters,color='blue')
     plt.plot(X_parameters,regr.predict(X_parameters),color='red',linewidth=4)
-    plt.xticks(())
-    plt.yticks(())
+    # plt.xticks(())
+    # plt.yticks(())
+    plt.xlabel("square_feet")
+    plt.ylabel("price")
     plt.show()
 
 X,Y = get_data('input_data.csv')

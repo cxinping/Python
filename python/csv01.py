@@ -2,15 +2,18 @@
  
 import csv
 
-with open('test.csv', 'w') as csvfile:
+with open('input_data.csv', 'w') as csvfile:
     spamwriter = csv.writer(csvfile,dialect='excel')
     
-    spamwriter.writerow(['a', '1', '1', '2', '2'])
-    spamwriter.writerow(['b', '3', '3', '6', '4'])
-    spamwriter.writerow(['c', '7', '7', '10', '4'])
-    spamwriter.writerow(['d', '11','11','11', '1'])
-    spamwriter.writerow(['e', '12','12','14', '3'])
-    
+    spamwriter.writerow(['rid','square_feet', 'price'])
+    spamwriter.writerow(['1', '150', '6450' ])
+    spamwriter.writerow(['2', '200', '7450'])
+    spamwriter.writerow(['3', '250', '8450' ])
+    spamwriter.writerow(['4', '300', '9450'])
+    spamwriter.writerow(['5', '350', '11450'])
+    spamwriter.writerow(['6', '400', '15450' ])
+    spamwriter.writerow(['7', '600', '18450'])
+
 with open('test.csv','r') as f:
     reader = csv.reader(f)
     for row in reader:
