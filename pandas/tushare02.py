@@ -12,3 +12,6 @@ data['open'].plot()
 
 plt.gcf().autofmt_xdate()  # 自动旋转日期标记
 plt.show()
+
+
+
