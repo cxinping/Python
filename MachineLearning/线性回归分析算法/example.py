@@ -4,6 +4,7 @@ import pandas as pd
 from sklearn import datasets, linear_model
 
 def get_data(file_name):
+    # 读取房屋面积与价格历史数据，读入dataframe
     data = pd.read_csv(file_name)
     X_parameter = []
     Y_parameter = []
@@ -14,13 +15,16 @@ def get_data(file_name):
     return X_parameter,Y_parameter
 
 def linear_model_main(X_parameters, Y_parameters, predict_value):
-    # Create linear regression object
+    # 建立线性回归模型
     regr = linear_model.LinearRegression()
     regr.fit(X_parameters, Y_parameters)
     predict_outcome = regr.predict(predict_value)
     predictions = {}
+	#到平面的 截距
     predictions['intercept'] = regr.intercept_
+	#到平面的系数 
     predictions['coefficient'] = regr.coef_
+	# 预测值
     predictions['predicted_value'] = predict_outcome
     return predictions
 
