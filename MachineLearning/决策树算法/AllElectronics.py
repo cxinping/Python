@@ -5,7 +5,9 @@ from sklearn import preprocessing
 from sklearn.externals.six import StringIO
 
 # Read in the csv file and put features into list of dict and list of class label
+# 载入样本数据
 allElectronicsData = open(r'./AllElectronics.csv', 'r')
+# 第一行表头
 reader = csv.reader(allElectronicsData)
 # #headers = reader.next
 for row in reader:
