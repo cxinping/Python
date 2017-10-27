@@ -27,17 +27,19 @@ model = LinearRegression()
 model.fit( X ,y)
 print('预测一张12英寸披萨的价格：' , model.predict( 12 ) )
 
-yPr= model.predict(X)
-plt.plot(X,y2  ) 
-#画出每个数据集的残差值
-for idx, x in enumerate(X ):
-    print('idx=' ,idx,',x=' ,x)
-    plt.plot( [x,x] , [y[idx] , yPr[idx]] , 'g-')
-    
 intercept = model.intercept_
 coef = model.coef_[0]
 print('截距 intercept=' , intercept)
 print('斜率 coef=' , coef )
 print('一元线性公式 ','y =  {0} * x + {1} '.format(coef, intercept ))
+
+yPr= model.predict(X)
+plt.plot(X,yPr  ) 
+#画出每个数据集的残差值
+for idx, x in enumerate(X ):
+  
+    plt.plot( [x,x] , [y[idx] , yPr[idx]] , 'g-')
+    
+
 
 plt.show()
