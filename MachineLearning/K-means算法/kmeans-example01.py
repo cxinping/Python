@@ -1,17 +1,17 @@
-# -*- coding: utf-8 -*-
+from sklearn.cluster import KMeans 
+import numpy as np  
+ 
+X = np.array([[0, 0], [1, 2], [3, 1],
+              [8, 8], [9, 10], [10, 7]])
 
-from sklearn.cluster import KMeans
-import numpy as np
-df=np.array([[3,3],[4,4],[5,5],[6,71],[6,93],[4,168],[9,779],[6,182],[7,59],[2,167]])
-clf = KMeans(n_clusters=2)
-s = clf.fit(df)
-print(s)
+kmeans = KMeans(n_clusters=2, random_state=1).fit(X)
+print('--- kmeans 标签 ---'  )
+print( kmeans.labels_)
 
-#2个中心
-print(clf.cluster_centers_)
+#predict = kmeans.predict([[0, 0], [4, 4]])
+#print('\n--- 预测值 ---')
+#print( predict )
 
-#每个样本所属的簇
-print(clf.labels_)
-
-# 进行预测
-print(clf.predict([[1,6]]))
+centers = kmeans.cluster_centers_
+print('\n--- kmeans 中心点 ---')
+print( centers )
