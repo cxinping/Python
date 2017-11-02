@@ -1,28 +1,14 @@
-import numpy as np
+问题的主因
 
-def fitSLR(x, y):
-    n = len(x)
-    dinominator = 0
-    numerator = 0
-    for i in range(0, n):
-        numerator += (x[i] - np.mean(x))*(y[i] - np.mean(y))
-        dinominator += (x[i] - np.mean(x))**2
-    b1 = numerator/float(dinominator)
-    b0 = np.mean(y)/float(np.mean(x))
-    return b0, b1
+过拟合问题往往源自过多的特征。
 
-def predict(x, b0, b1):
-    return b0 + x*b1
+解决方法
 
-x = [1, 3, 2, 1, 3]
-y = [14, 24, 18, 17, 27]
+1）减少特征数量（减少特征会失去一些信息，即使特征选的很好）
 
-b0, b1 = fitSLR(x, y)
+    可用人工选择要保留的特征；
+    模型选择算法；
 
-print(  "intercept:", b0, " slope:", b1 )
+2）正则化（特征较多时比较有效）
 
-x_test = 6
-
-y_test = predict(6, b0, b1)
-
-print(  "y_test:", y_test )
+    保留所有特征，但减少θ的大小
