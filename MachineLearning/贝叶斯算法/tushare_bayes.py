@@ -1,12 +1,8 @@
-# -*- coding: utf-8 -*-
-
 import tushare as ts
 from sklearn.naive_bayes import GaussianNB
 from sklearn.model_selection import train_test_split
-
 import numpy as np
 import pandas as pd
-
 
 df = ts.get_hist_data('600848')
 
