@@ -26,7 +26,7 @@ class BlockChain(object):
         )
 
 # 初始化
-chain = BlockChain()
+#chain = BlockChain()
 
 ## 打印
 #print( chain  )
