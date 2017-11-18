@@ -26,7 +26,7 @@ class BlockChain(object):
         )
 
 # 初始化
-#chain = BlockChain()
+chain = BlockChain()
 
 ## 打印
 #print( chain  )
@@ -36,8 +36,15 @@ from Block import Block
 block = Block('Hello World')
 # 添加区块
 chain.add_block(block)
-#
+
+# 打印
+#print( chain  )
+
+# 添加更多的区块
+for i in range(6):
+    new_block = Block(i)
+    new_block.mine()
+    chain.add_block(new_block)
+
 # 打印
 print( chain  )
-
-
