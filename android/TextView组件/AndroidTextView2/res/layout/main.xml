@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+   <TextView
+        android:id="@+id/textview1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"  
+        android:padding="20px"
+        android:text="网址 www.baidu.com"
+ 	/> 
+  
+   <TextView
+        android:id="@+id/textview2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"  
+        android:padding="20px"
+        android:autoLink="all"
+        android:textSize="20px"
+        android:text="@string/link_text"
+ 	/> 
+    
+     <TextView
+        android:id="@+id/textview3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"  
+        android:padding="20px"
+        android:autoLink="all"
+        android:textSize="20px"
+        android:text="网址 http://42.185.61.153:8020/web1/stack.html 电话: 13501200637"
+ 	/> 
+
+</LinearLayout>
