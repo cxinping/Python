@@ -1,7 +1,7 @@
 package com.test;
 
 import com.test.service.LoginService;
-import com.test.tools.HttpUtils;
+import com.test.service.domain.LoginResult;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
   
@@ -46,8 +47,14 @@ public class MainActivity extends Activity {
 //				userEdit.setText("aaa");
 //				pwdEdit.setText("123");
 				
-				loginService.login2Server(username, pwd);
+				LoginResult result = loginService.login2Server(username, pwd);
+				if( result.isFlag()){
+					Log.i("main", "µÇê‘³É¹¦");
+				}else{
+					Log.i("main", "µÇê‘Ê§”¡");
+				}
 				
+				Toast.makeText(MainActivity.this, result.getDesc(), Toast.LENGTH_SHORT).show();
 			}
 		});
         
