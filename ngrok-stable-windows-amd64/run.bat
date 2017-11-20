@@ -1,0 +1,1 @@
+ngrok http -subdomain=myweb 8080
